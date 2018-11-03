@@ -1,0 +1,46 @@
+# Script
+Fabric==1.10.3
+
+# Flask related
+Flask==0.10.1
+Flask-Classy==0.6.10
+
+# DB related
+PyMongo==3.4.0
+
+# json
+simplejson==3.8.1
+
+# Deploy
+gunicorn==19.3.0
+
+# Yaml reader
+PyYAML==3.11
+HiYaPyCo==0.4.4
+
+# Dict for human
+addict==0.2.7
+
+# Time util
+arrow==0.5.4
+
+# Redis client
+redis==2.10.3
+
+# Celery
+celery==3.1.18
+
+# Request
+requests==2.7.0
+
+# Sentry
+raven==5.27.1
+
+# Log with some color
+colorlog==2.7.0
+
+# Blinker
+blinker==1.4
+
+# Kafka logging
+python-kafka-logging==0.6

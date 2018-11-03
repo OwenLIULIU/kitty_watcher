@@ -1,0 +1,42 @@
+application_identifier: kitty_watcher
+
+logging:
+  version: 1
+  disable_existing_loggers: False,
+  formatters:
+    default:
+      (): colorlog.ColoredFormatter
+      format: "[%(asctime)s] %(log_color)s%(levelname)-8s %(message)s"
+      datefmt: "%H:%M:%S"
+  handlers:
+    default:
+      class: logging.StreamHandler
+      level: DEBUG
+      formatter: default
+      stream: ext://sys.stdout
+    nil:
+      class: logging.NullHandler
+      level: DEBUG
+  loggers:
+    default:
+      handlers: [default]
+      level: DEBUG
+    pattern_messages:
+      handlers: [default]
+      level: INFO
+      propagate: False
+
+sentry:
+  enabled: False
+
+cia:
+  protocol: http
+  host: 127.0.0.1
+  port: 34024
+
+redis:
+  host: 127.0.0.1
+  port: 6379
+
+kafka:
+  - 10.171.174.67:9092

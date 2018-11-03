@@ -1,0 +1,33 @@
+application_identifier: kitty_watcher
+
+logging:
+  version: 1
+  disable_existing_loggers: False,
+  formatters:
+    default:
+      format: "[%(asctime)s] %(levelname)s %(message)s"
+  handlers:
+    default:
+      class: logging.StreamHandler
+      level: DEBUG
+      formatter: default
+      stream: ext://sys.stdout
+  loggers:
+    "":
+      handlers: [default]
+      level: DEBUG
+
+sentry:
+  enabled: True
+  dsn: http://f53193f1b924460399b21564c53804a7:560ab37def46483196ac3762798fe89f@sentry.0mzl.com/28
+
+cia:
+  protocol: http
+  host: cia
+  port: 34024
+
+redis:
+  enabled: True
+  host: redis
+  port: 6379
+  password: < /var/run/secrets/redis-pw
